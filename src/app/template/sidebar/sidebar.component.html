@@ -1,0 +1,118 @@
+<div class="cart">
+  <div class="title">
+    <div>
+      <span class="title_icon">
+        <img src="assets/css/images/cart.gif" alt="" title="" />
+      </span>Giỏ hàng:
+      <a href="#" style="text-decoration:none">Xem giỏ hàng</a>
+      <br>
+    </div>
+    <!-- <p style="color:red">@TempData["GioHangError"]</p> -->
+  </div>
+  <br>
+</div>
+<div class="clear"></div>
+<div class="title">
+  <span class="title_icon">
+    <img src="assets/css/images/bullet3.gif" alt="" title="" />
+  </span>V&#7873; c&#7917;a hàng c&#7911;a chúng tôi</div>
+<div class="about">
+  <p>
+    <img src="assets/css/images/about.gif" alt="" title="" class="right" /> Đến với Thư viện 03 các bạn sẽ tìm được đa số các đầu sách cũ và sách mới được Thư viện 03 cập nhật với các bản tái
+    bản cũng như sách mới có chất lượng tốt nhất.
+  </p>
+
+</div>
+<!-- @*<div class="right_box">
+
+        <div class="title"><span class="title_icon"><img src="assets/css/images/bullet4.gif" alt="" title="" /></span>Sách hot</div>
+     
+            <div class="new_prod_box">
+                <a href="details.html">@sach.TenSach</a>
+                <div class="new_prod_bg">
+
+                    <a href="#"><img src="~/images/@sach.HinhAnh" alt="" title="" class="thumb" border="0" width="67px" /></a>
+                </div>
+            </div>
+  
+    </div>*@ -->
+<div class="right_box">
+    <div class="title"><span class="title_icon"><img src="assets/css/images/bullet4.gif" alt="" title="" /></span>Sách hot</div>
+  <app-tophot></app-tophot>
+</div>
+<div class="right_box">
+  <div class="title">
+    <span class="title_icon">
+      <img src="assets/css/images/bullet5.gif" alt="" title="" />
+    </span>Tìm kiếm sách:</div>
+  <div class="row">
+    <div class="col-md-4">
+      <p>
+        <strong>Tên Sách:</strong>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <input type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <p>
+        <strong>Tên tác giả:</strong>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <input type="text">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <p>
+        <strong> Thể Loại: </strong>
+      </p>
+    </div>
+    <div class="col-md-8">
+      <p>
+        <select></select>
+        <input type="submit" name="Search" value="Lọc" />
+      </p>
+    </div>
+  </div>
+
+  <div class="title">
+    <span class="title_icon">
+      <img src="assets/css/images/bullet5.gif" alt="" title="" />
+    </span>Danh m&#7909;c</div>
+
+  <ul class="list">
+    <!-- @foreach (var item in Model)
+        { -->
+    <li>
+      <a href="#">Tên thể loại</a>
+    </li>
+    <!-- } -->
+  </ul>
+
+  <div class="title">
+    <span class="title_icon">
+      <img src="assets/css/images/bullet6.gif" alt="" title="" />
+    </span>Nhóm Thư viện 03</div>
+
+  <ul class="list">
+    <li>
+      <a href="#">Hoàng Lâm</a>
+    </li>
+    <li>
+      <a href="#">Lộc Võ</a>
+    </li>
+    <li>
+      <a href="#">Minh Tùng</a>
+    </li>
+    <li>
+      <a href="#">Minh Thông</a>
+    </li>
+    <li>
+      <a href="#">Minh Tài</a>
+    </li>
+  </ul>
+</div>

@@ -1,3 +1,42 @@
-<p>
-  dangnhap works!
-</p>
+<div class="title">
+  <span class="title_icon">
+    <img src="assets/css/images/bullet1.gif" alt="" title="" />
+  </span>My account</div>
+
+<div class="feat_prod_box_details">
+  <!-- <p class="details" style="color:red">
+    @TempData["DangNhapError"]
+  </p> -->
+  <p class="details">
+    Mời bạn đăng nhập!!!
+  </p>
+  <div class="contact_form">
+    <div class="form_subtitle">Đăng nhập</div>
+   
+    <table>
+        <form [formGroup]="dangnhapForm" (ngSubmit)="submit()">
+      <tr style="height: 40px; margin-top: 40px" class="contact_input">
+        <td>Số điện thoại: </td>
+        <td>     
+          <input class="form-control text-box single-line" formControlName="SoDienThoai" type="tel">
+        </td>
+      </tr>
+      <tr style="height: 40px; margin-top: 40px" class="contact_input">
+        <td>Mật khẩu: </td>
+        <td>
+            <input class="form-control text-box single-line" formControlName="MatKhau" type="password">
+        </td>
+      </tr>
+      <tr style="height:40px">
+        <td></td>
+        <td>
+          <input type="submit" value="Đăng nhập" class="register" />
+        </td>
+      </tr>
+    </form>
+    </table>
+    <!-- <p style="color:red">@ViewData["loi0"] @ViewData["loi1"] @ViewData["loi2"] @ViewBag.ThongBao</p> -->
+
+  </div>
+</div>
+<div class="clear"></div>

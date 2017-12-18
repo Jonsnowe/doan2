@@ -1,3 +1,57 @@
-<p>
-  dangki works!
-</p>
+<div class="title">
+  <span class="title_icon">
+    <img src="assets/css/images/bullet1.gif" alt="" title="" />
+  </span>Đăng ký thành viên</div>
+<div class="feat_prod_box_details">
+  <p class="details">
+    Mời bạn đăng ký tài khoản!!!
+  </p>
+  <div class="contact_form">
+    <div class="form_subtitle">Điền vào mẫu đơn</div>
+    <form [formGroup]="dangkiForm" (ngSubmit)="submit()">
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4">Số điện thoại</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="SoDienThoai" type="tel">
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4">Mật khẩu</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="MatKhau" type="password">
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4">Tên độc giả</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="TenDocGia" type="text">
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4 ">Địa chỉ</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="DiaChi" type="text">
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+
+        <label class="control-label col-md-4 ">Email</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="Email" type="email">
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4 ">CMND</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="CMND" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          <input type="submit" value="Đăng Ký" class="register" style="margin-right: 15px; " />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="clear"></div>

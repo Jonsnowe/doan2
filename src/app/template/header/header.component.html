@@ -7,8 +7,10 @@
       </div>
       <div id="menu">
           <ul>
-              <li><a href="#">Trang chủ</a></li>
-              <li><a href="#">Sách</a></li>
+              <li><a routerLink="/">Trang chủ</a></li>
+              <li><a routerLink="sach">Sách</a></li>
+              <li><a routerLink="dangki">Đăng kí</a></li>
+              <li><a routerLink="dangnhap">Đăng nhập</a></li>
               <!-- @if (@Session["Taikhoan"] != null)
               {
                   <li>@Html.ActionLink("Đăng xuất", "LogOut", "Interface")</li>
@@ -26,7 +28,7 @@
                   <li>@Html.ActionLink("Lịch Sử Giao Dịch", "LichSuGiaoDich")</li>
               } -->
               <li><a href="#">Quản lý</a></li>
-              <li><a href="#">Thông tin</a></li>
+              <li><a routerLink="thongtin">Thông tin</a></li>
           </ul>
       </div>
   </div>

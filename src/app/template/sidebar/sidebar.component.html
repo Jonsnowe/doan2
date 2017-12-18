@@ -37,7 +37,10 @@
   
     </div>*@ -->
 <div class="right_box">
-    <div class="title"><span class="title_icon"><img src="assets/css/images/bullet4.gif" alt="" title="" /></span>Sách hot</div>
+  <div class="title">
+    <span class="title_icon">
+      <img src="assets/css/images/bullet4.gif" alt="" title="" />
+    </span>Sách hot</div>
   <app-tophot></app-tophot>
 </div>
 <div class="right_box">
@@ -45,39 +48,45 @@
     <span class="title_icon">
       <img src="assets/css/images/bullet5.gif" alt="" title="" />
     </span>Tìm kiếm sách:</div>
-  <div class="row">
-    <div class="col-md-4">
-      <p>
-        <strong>Tên Sách:</strong>
-      </p>
+
+  <form [formGroup]="searchForm" (ngSubmit)="Search_()" class="login_content">
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          <strong>Tên Sách:</strong>
+        </p>
+      </div>
+      <div class="col-md-8">
+        <input formControlName="searchString" type="text">
+      </div>
     </div>
-    <div class="col-md-8">
-      <input type="text">
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          <strong>Tên tác giả:</strong>
+        </p>
+      </div>
+      <div class="col-md-8">
+        <input formControlName="searchTacgia" type="text">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <p>
-        <strong>Tên tác giả:</strong>
-      </p>
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          <strong> Thể Loại: </strong>
+        </p>
+      </div>
+      <div class="col-md-8">
+        <p>
+          <select formControlName="searchTheloai">
+            <option value="0">Tất cả</option>
+            <option *ngFor="let theloai of theloais" value="{{theloai.matheloai}}">{{theloai.tentheloai}}</option>
+          </select>
+          <input type="submit" value="Lọc" />
+        </p>
+      </div>
     </div>
-    <div class="col-md-8">
-      <input type="text">
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4">
-      <p>
-        <strong> Thể Loại: </strong>
-      </p>
-    </div>
-    <div class="col-md-8">
-      <p>
-        <select></select>
-        <input type="submit" name="Search" value="Lọc" />
-      </p>
-    </div>
-  </div>
+  </form>
 
   <div class="title">
     <span class="title_icon">
@@ -85,12 +94,9 @@
     </span>Danh m&#7909;c</div>
 
   <ul class="list">
-    <!-- @foreach (var item in Model)
-        { -->
-    <li>
-      <a href="#">Tên thể loại</a>
+    <li *ngFor="let theloai of theloais">
+      <a href="#">{{theloai.tentheloai}}</a>
     </li>
-    <!-- } -->
   </ul>
 
   <div class="title">

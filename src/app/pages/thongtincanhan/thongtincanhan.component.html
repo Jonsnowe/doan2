@@ -1,0 +1,59 @@
+
+<div class="title">
+  <span class="title_icon">
+    <img src="assets/css/images/bullet1.gif" alt="" title="" />
+  </span>Thông tin cá nhân</div>
+<div class="feat_prod_box_details">
+  <div class="contact_form">
+    <div class="form_subtitle">Thông tin cá nhân</div>
+
+    <form [formGroup]="thongtinForm" (ngSubmit)="submit()">
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4">Tên độc giả</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="tendocgia" type="tex" disabled>
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4">Địa chỉ</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="diachi" type="text" disabled>
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4">Email</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="email" type="text" disabled>
+        </div>
+      </div>
+      <p class="details">
+        Chỉ nhập mật khẩu khi cần thay đổi mật khẩu mới
+      </p>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4 ">Mật khẩu cũ:</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="matkhaucu" type="text">
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+
+        <label class="control-label col-md-4 ">Mật khẩu mới:</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="matkhaumoi" type="text">
+        </div>
+      </div>
+      <div class="form-group col-lg-12">
+        <label class="control-label col-md-4 ">Nhập Lại Mật Khẩu:</label>
+        <div class="col-md-8">
+          <input class="form-control text-box single-line" formControlName="matkhaumoi_" type="text">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+          <input type="submit" value="Lưu" class="register" [disabled]="!thongtinForm.valid" style="margin-right: 15px; " />
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="clear"></div>

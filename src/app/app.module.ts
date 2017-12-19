@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { appRouter } from './app.router';
@@ -29,7 +31,9 @@ import { TheloaiComponent } from './components/theloai/theloai.component';
     BrowserModule,
     appRouter,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule.forRoot(),
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

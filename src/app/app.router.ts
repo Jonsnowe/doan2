@@ -20,6 +20,14 @@ export const routes: Routes = [
     path:'dangnhap',
     loadChildren:'app/pages/dangnhap/dangnhap.module#DangnhapModule'
   },
+  {
+    path:'thongtincanhan',
+    loadChildren:'app/pages/thongtincanhan/thongtincanhan.module#ThongtincanhanModule'
+  },
+  {
+    path:'lichsugiaodich',
+    loadChildren:'app/pages/lichsugiaodich/lichsugiaodich.module#LichsugiaodichModule'
+  },
   { path: 'thongtin', component:  ThongtinComponent},
 ];
 

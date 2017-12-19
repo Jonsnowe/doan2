@@ -30,7 +30,7 @@
       <tr style="height:40px">
         <td></td>
         <td>
-          <input type="submit" value="Đăng nhập" class="register" />
+          <input type="submit" [disabled]="!dangnhapForm.valid" value="Đăng nhập" class="register" />
         </td>
       </tr>
     </form>

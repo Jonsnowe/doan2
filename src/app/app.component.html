@@ -1,11 +1,11 @@
-<app-header></app-header>
+<app-header ></app-header>
 <div class="body-content">
   <div id="wrap">
-    <div class="center_content">
-        <div class="left_content">
+    <div [ngClass]="{'center_content': showSidebar===true, 'panel-body': showSidebar!==true}">
+        <div [ngClass]="{'left_content': showSidebar===true}">
             <router-outlet></router-outlet>
         </div>
-        <div class="right_content">
+        <div class="right_content" *ngIf="showSidebar==true">
             <app-sidebar></app-sidebar>
         </div><!--end of right content-->
         <div class="clear"></div>

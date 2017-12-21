@@ -1,3 +1,5 @@
+import { Sach } from "./sach.entities";
+
 export interface CTMuonTra{
         STT: string,
         IDSach: String,
@@ -12,7 +14,7 @@ export interface CTMuonTra{
         TienCoc: number,
         TienThue: number,
         TienPhat: number,
-        TongTien: number
-      
+        TongTien: number,
+        sach:Sach
 
 }

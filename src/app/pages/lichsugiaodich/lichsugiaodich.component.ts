@@ -38,7 +38,9 @@ export class LichsugiaodichComponent implements OnInit {
           this.CTdatcoc.forEach(e => {
             this.userservice.getsach(e.IDSach).then(res => {
               if (this.datcoc.filter(s => s.IDSach == res.IDSach).length === 0) {
-                this.datcoc.push(res)
+                // this.datcoc.push(res)
+                this.CTdatcoc.find(s=>s.STT==e.STT).sach=res
+                
               }
               // console.log(res)
             })
@@ -46,16 +48,18 @@ export class LichsugiaodichComponent implements OnInit {
           this.CTdangmuon.forEach(e => {
             this.userservice.getsach(e.IDSach).then(res => {
               if (this.dangmuon.filter(s => s.IDSach == res.IDSach).length === 0) {
-                this.dangmuon.push(res)
+                // this.dangmuon.push(res)
+                this.CTdangmuon.find(s=>s.STT==e.STT).sach=res
               }
 
-              console.log(res)
+              // console.log(res)
             })
           })
           this.CTdamuon.forEach(e => {
             this.userservice.getsach(e.IDSach).then(res => {
               if (this.damuon.filter(s => s.IDSach == res.IDSach).length === 0) {
-                this.damuon.push(res)
+                // this.damuon.push(res)
+                this.CTdamuon.find(s=>s.STT==e.STT).sach=res                
               }
               console.log(res)
             })

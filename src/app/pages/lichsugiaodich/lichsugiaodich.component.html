@@ -41,32 +41,35 @@
                 {{user.TenDocGia}}
               </td>
 
-              <td *ngFor="let sach of datcoc">
-                <a *ngIf="ct.IDSach==sach.IDSach" href="#" >
-                  <img src="{{sach.HinhAnh}}" height="70" width="70"> </a>
+              <!-- <td *ngFor="let sach of datcoc"> -->
+              <td>
+                <!-- <a *ngIf="ct.IDSach==sach.IDSach" href="#" > -->
+                <a href="#">
+                  <img src="{{ct.sach.HinhAnh}}" height="70" width="70"> </a>
               </td>
 
-              <td *ngFor="let sach of datcoc">
-                <p>{{sach.TenSach}}</p>
+              <!-- <td *ngFor="let sach of datcoc"> -->
+              <td>
+                <p>{{ct.sach.TenSach}}</p>
               </td>
 
-              <td >
+              <td>
                 {{ct.NgayMuon}}
               </td>
               <td>
                 {{ct.NgayTraQuyDinh}}
               </td>
               <td>
-                  {{ct.TriGia}}
+                {{ct.TriGia}}
               </td>
               <td>
-                  {{ct.TienThue}}
+                {{ct.TienThue}}
               </td>
               <td>
-                  {{ct.TienCoc}}
+                {{ct.TienCoc}}
               </td>
               <td>
-                  {{ct.TongTien}}
+                {{ct.TongTien}}
               </td>
 
               <td>
@@ -112,43 +115,46 @@
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let ct of CTdangmuon">
-                <td>
-                  {{user.TenDocGia}}
-                </td>
-  
-                <td *ngFor="let sach of dangmuon">
-                  <a *ngIf="ct.IDSach==sach.IDSach" href="#" >
-                    <img src="{{sach.HinhAnh}}" height="70" width="70"> </a>
-                </td>
-  
-                <td *ngFor="let sach of dangmuon">
-                  <p>{{sach.TenSach}}</p>
-                </td>
-  
-                <td >
-                  {{ct.NgayMuon}}
-                </td>
-                <td>
-                  {{ct.NgayTraQuyDinh}}
-                </td>
-                <td>
-                    {{ct.TriGia}}
-                </td>
-                <td>
-                    {{ct.TienThue}}
-                </td>
-                <td>
-                    {{ct.TienCoc}}
-                </td>
-                <td>
-                    {{ct.TongTien}}
-                </td>
-  
-                <td>
-                  <a href="#">Huy</a>
-                </td>
-              </tr>
+          <tr *ngFor="let ct of CTdangmuon">
+            <td>
+              {{user.TenDocGia}}
+            </td>
+
+            <!-- <td *ngFor="let sach of dangmuon">
+              <a *ngIf="ct.IDSach==sach.IDSach" href="#"> -->
+            <td>
+              <a href="#">
+                <img src="{{ct.sach.HinhAnh}}" height="70" width="70"> </a>
+            </td>
+
+            <!-- <td *ngFor="let sach of dangmuon"> -->
+            <td>
+              <p>{{ct.sach.TenSach}}</p>
+            </td>
+
+            <td>
+              {{ct.NgayMuon}}
+            </td>
+            <td>
+              {{ct.NgayTraQuyDinh}}
+            </td>
+            <td>
+              {{ct.TriGia}}
+            </td>
+            <td>
+              {{ct.TienThue}}
+            </td>
+            <td>
+              {{ct.TienCoc}}
+            </td>
+            <td>
+              {{ct.TongTien}}
+            </td>
+
+            <td>
+              <a href="#">Huy</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </ng-template>
@@ -201,43 +207,56 @@
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let ct of CTdamuon">
-                <td>
-                  {{user.TenDocGia}}
-                </td>
-  
-                <td *ngFor="let sach of damuon">
-                  <a *ngIf="ct.IDSach==sach.IDSach" href="#" >
-                    <img src="{{sach.HinhAnh}}" height="70" width="70"> </a>
-                </td>
-  
-                <td *ngFor="let sach of damuon">
-                  <p>{{sach.TenSach}}</p>
-                </td>
-  
-                <td >
-                  {{ct.NgayMuon}}
-                </td>
-                <td>
-                  {{ct.NgayTraQuyDinh}}
-                </td>
-                <td>
-                    {{ct.TriGia}}
-                </td>
-                <td>
-                    {{ct.TienThue}}
-                </td>
-                <td>
-                    {{ct.TienCoc}}
-                </td>
-                <td>
-                    {{ct.TongTien}}
-                </td>
-  
-                <td>
-                  <a href="#">Huy</a>
-                </td>
-              </tr>
+          <tr *ngFor="let ct of CTdamuon">
+            <td>
+              {{user.TenDocGia}}
+            </td>
+
+            <!-- <td *ngFor="let sach of damuon">
+              <a *ngIf="ct.IDSach==sach.IDSach" href="#"> -->
+            <td>
+              <a href="#">
+                <img src="{{ct.sach.HinhAnh}}" height="70" width="70">
+              </a>
+            </td>
+
+            <!-- <td *ngFor="let sach of damuon"> -->
+            <td>
+              <p>{{ct.sach.TenSach}}</p>
+            </td>
+
+            <td>
+              {{ct.NgayMuon}}
+            </td>
+            <td>
+              {{ct.NgayTraQuyDinh}}
+            </td>
+            <td>
+              {{ct.NgayTraThucTe}}
+            </td>
+            <td>
+              {{ct.NgayQuaHan}}
+            </td>
+            <td>
+              {{ct.TinhTrangMuon}}
+            </td>
+            <td>
+              {{ct.TriGia}}
+            </td>
+            <td>
+              {{ct.TienThue}}
+            </td>
+            <td>
+              {{ct.TienCoc}}
+            </td>
+            <td>
+              {{ct.TongTien}}
+            </td>
+
+            <td>
+              <a href="#">Huy</a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </ng-template>

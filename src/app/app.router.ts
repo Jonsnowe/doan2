@@ -28,6 +28,10 @@ export const routes: Routes = [
     path:'lichsugiaodich',
     loadChildren:'app/pages/lichsugiaodich/lichsugiaodich.module#LichsugiaodichModule'
   },
+  {
+    path:'chitietsach/:id',
+    loadChildren:'app/pages/chitietsach/chitietsach.module#ChitietsachModule'
+  },
   { path: 'thongtin', component:  ThongtinComponent},
 ];
 

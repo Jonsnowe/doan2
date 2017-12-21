@@ -12,9 +12,7 @@ import { SidebarComponent } from './template/sidebar/sidebar.component';
 import { TophotComponent } from './template/tophot/tophot.component';
 import { ThongtinComponent } from './template/thongtin/thongtin.component';
 import { TheloaiComponent } from './components/theloai/theloai.component';
-
-
-
+import{DatePipe} from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -35,7 +33,7 @@ import { TheloaiComponent } from './components/theloai/theloai.component';
     NgbModule.forRoot(),
     HttpModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

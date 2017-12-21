@@ -14,23 +14,6 @@
               <li><a (click)="dangxuat()" *ngIf="daDangnhap==true" style="cursor: pointer">Đăng xuất</a></li>
               <li><a routerLink="thongtincanhan"style="color:red" *ngIf="daDangnhap==true">User: {{tenuser}}</a></li>
               <li><a routerLink="lichsugiaodich" *ngIf="daDangnhap==true">Lịch sử giao dịch</a></li>
-              
-              <!-- @if (@Session["Taikhoan"] != null)
-              {
-                  <li>@Html.ActionLink("Đăng xuất", "LogOut", "Interface")</li>
-                  <li><a href=@Url.Action("ThongTinCaNhan","Interface") style="color:red">User: @HttpContext.Current.Session["TenTaiKhoan"]</a></li>
-              }
-              else
-              {
-                  <li>@Html.ActionLink("Đăng kí", "DangKy", "Interface")</li>
-                  <li>@Html.ActionLink("Đăng nhập", "DangNhap", "Interface")</li>
-              } -->
-
-
-              <!-- @if (@Session["Taikhoan"] != null)
-              {
-                  <li>@Html.ActionLink("Lịch Sử Giao Dịch", "LichSuGiaoDich")</li>
-              } -->
               <li><a href="#">Quản lý</a></li>
               <li><a routerLink="thongtin">Thông tin</a></li>
           </ul>

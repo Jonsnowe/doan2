@@ -1,5 +1,5 @@
 <ngb-tabset>
-  <ngb-tab title="Sach Dang Dat">
+  <ngb-tab title="Sách đang đặt">
     <ng-template ngbTabContent>
       <table class="table table-bordered table-hover DataTable">
         <thead>
@@ -36,37 +36,37 @@
         </thead>
         <tbody>
           <tbody>
-            <tr>
+            <tr *ngFor="let ct of CTdatcoc">
               <td>
-                Lâm
+                {{user.TenDocGia}}
               </td>
 
-              <td>
-                <a href="#">
-                  <img src="http://nhom3thuvien.somee.com/Images/6.jpg" height="70" width="70"> </a>
+              <td *ngFor="let sach of datcoc">
+                <a *ngIf="ct.IDSach==sach.IDSach" href="#" >
+                  <img src="{{sach.HinhAnh}}" height="70" width="70"> </a>
               </td>
 
-              <td>
-                Harry Potter And The Order Of The Phoenix
+              <td *ngFor="let sach of datcoc">
+                <p>{{sach.TenSach}}</p>
               </td>
 
-              <td>
-                11/05/2017 9:27:16 PM
-              </td>
-
-              <td>
+              <td >
+                {{ct.NgayMuon}}
               </td>
               <td>
-                30000.00
+                {{ct.NgayTraQuyDinh}}
               </td>
               <td>
-                10000.00
+                  {{ct.TriGia}}
               </td>
               <td>
-                33000.00
+                  {{ct.TienThue}}
               </td>
               <td>
-                43000.00
+                  {{ct.TienCoc}}
+              </td>
+              <td>
+                  {{ct.TongTien}}
               </td>
 
               <td>
@@ -77,7 +77,7 @@
       </table>
     </ng-template>
   </ngb-tab>
-  <ngb-tab title="Sach Dang Muon">
+  <ngb-tab title="Sách đang mượn">
     <ng-template ngbTabContent>
       <table class="table table-bordered table-hover DataTable">
         <thead>
@@ -112,37 +112,43 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              Lâm
-            </td>
-            <td>
-              <a href="#">
-                <img src="http://nhom3thuvien.somee.com/Images/8.jpg" height="70" width="70"> </a>
-            </td>
-
-            <td>
-              Cho Tôi Xin Một Vé Đi Tuổi Thơ (Tái Bản 2015)
-            </td>
-            <td>
-              11/04/2017 12:00:00 AM
-            </td>
-            <td>
-              11/14/2017 12:00:00 AM
-            </td>
-            <td>
-              45000.00
-            </td>
-            <td>
-              10000.00
-            </td>
-            <td>
-              49500.00
-            </td>
-            <td>
-              59500.00
-            </td>
-          </tr>
+            <tr *ngFor="let ct of CTdangmuon">
+                <td>
+                  {{user.TenDocGia}}
+                </td>
+  
+                <td *ngFor="let sach of dangmuon">
+                  <a *ngIf="ct.IDSach==sach.IDSach" href="#" >
+                    <img src="{{sach.HinhAnh}}" height="70" width="70"> </a>
+                </td>
+  
+                <td *ngFor="let sach of dangmuon">
+                  <p>{{sach.TenSach}}</p>
+                </td>
+  
+                <td >
+                  {{ct.NgayMuon}}
+                </td>
+                <td>
+                  {{ct.NgayTraQuyDinh}}
+                </td>
+                <td>
+                    {{ct.TriGia}}
+                </td>
+                <td>
+                    {{ct.TienThue}}
+                </td>
+                <td>
+                    {{ct.TienCoc}}
+                </td>
+                <td>
+                    {{ct.TongTien}}
+                </td>
+  
+                <td>
+                  <a href="#">Huy</a>
+                </td>
+              </tr>
         </tbody>
       </table>
     </ng-template>
@@ -195,53 +201,43 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              Lâm
-            </td>
-            <td>
-              <a href="#">
-                <img src="http://nhom3thuvien.somee.com/Images/8.jpg" height="70" width="70"> </a>
-            </td>
-            <td>
-              Cho Tôi Xin Một Vé Đi Tuổi Thơ (Tái Bản 2015)
-            </td>
-            <td>
-              11/04/2017 12:00:00 AM
-            </td>
-            <td>
-              11/14/2017 12:00:00 AM
-            </td>
-            <td>
-              11/04/2017 2:06:46 PM
-            </td>
-            <td>
-              0
-            </td>
-            <td>
-              <span>Đã Trả</span>
-
-
-            </td>
-
-            <td>
-              45000.00
-
-            </td>
-            <td>
-              49500.00
-            </td>
-            <td>
-              10000.00
-            </td>
-            <td>
-              0.00
-            </td>
-            <td>
-              59500.00
-            </td>
-
-          </tr>
+            <tr *ngFor="let ct of CTdamuon">
+                <td>
+                  {{user.TenDocGia}}
+                </td>
+  
+                <td *ngFor="let sach of damuon">
+                  <a *ngIf="ct.IDSach==sach.IDSach" href="#" >
+                    <img src="{{sach.HinhAnh}}" height="70" width="70"> </a>
+                </td>
+  
+                <td *ngFor="let sach of damuon">
+                  <p>{{sach.TenSach}}</p>
+                </td>
+  
+                <td >
+                  {{ct.NgayMuon}}
+                </td>
+                <td>
+                  {{ct.NgayTraQuyDinh}}
+                </td>
+                <td>
+                    {{ct.TriGia}}
+                </td>
+                <td>
+                    {{ct.TienThue}}
+                </td>
+                <td>
+                    {{ct.TienCoc}}
+                </td>
+                <td>
+                    {{ct.TongTien}}
+                </td>
+  
+                <td>
+                  <a href="#">Huy</a>
+                </td>
+              </tr>
         </tbody>
       </table>
     </ng-template>

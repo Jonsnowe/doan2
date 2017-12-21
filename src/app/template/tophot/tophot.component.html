@@ -1,39 +1,16 @@
-<!-- @foreach (var sach in Model)
-{ -->
-<div class="new_prod_box">
+<div class="new_prod_box" *ngFor="let sach of data | slice:0:4">
+    <a [routerLink]="['/chitietsach',sach.IDSach]">{{sach.TenSach}}</a>
+    <div class="new_prod_bg">
+        <a [routerLink]="['/chitietsach',sach.IDSach]">
+            <img src="{{sach.HinhAnh}}" alt="" title="" class="thumb" border="0" width="67" />
+        </a>
+    </div>
+</div>
+<!-- <div class="new_prod_box">
     <a href="details.html">Hary Potter</a>
     <div class="new_prod_bg">
         <a href="#">
             <img src="assets/css/images/1.jpg" alt="" title="" class="thumb" border="0" width="67" />
         </a>
-        <!-- @*<img src="~/images/@sach.HinhAnh" alt="" title="" class="thumb" border="0" width="67" /></a>*@ -->
     </div>
-</div>
-<div class="new_prod_box">
-    <a href="details.html">Hary Potter</a>
-    <div class="new_prod_bg">
-        <a href="#">
-            <img src="assets/css/images/1.jpg" alt="" title="" class="thumb" border="0" width="67" />
-        </a>
-        <!-- @*<img src="~/images/@sach.HinhAnh" alt="" title="" class="thumb" border="0" width="67" /></a>*@ -->
-    </div>
-</div>
-<div class="new_prod_box">
-    <a href="details.html">Hary Potter</a>
-    <div class="new_prod_bg">
-        <a href="#">
-            <img src="assets/css/images/1.jpg" alt="" title="" class="thumb" border="0" width="67" />
-        </a>
-        <!-- @*<img src="~/images/@sach.HinhAnh" alt="" title="" class="thumb" border="0" width="67" /></a>*@ -->
-    </div>
-</div>
-<div class="new_prod_box">
-    <a href="details.html">Hary Potter</a>
-    <div class="new_prod_bg">
-        <a href="#">
-            <img src="assets/css/images/1.jpg" alt="" title="" class="thumb" border="0" width="67" />
-        </a>
-        <!-- @*<img src="~/images/@sach.HinhAnh" alt="" title="" class="thumb" border="0" width="67" /></a>*@ -->
-    </div>
-</div>
-<!-- } -->
+</div> -->
